@@ -16,7 +16,7 @@ ENV PATH="${PATH}:/root/.dotnet/tools"
 #aplica a migração do banco de dados
 #RUN dotnet ef database update --project "DescomplicaseApp.csproj"
 #publica o aplicativo em modo release no diretório /app
-RUN dotnet publish "Authentication.csproj" -c Release -o /app --no-restore
+RUN dotnet publish "SimpleAuthentication/Authentication.csproj" -c Release -o /app --no-restore
 
 #PRODUÇÃO
 #imagem do .NET Core 6 Runtime para Ubuntu 20.04
