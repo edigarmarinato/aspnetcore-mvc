@@ -1,0 +1,48 @@
+@using Auth.Models;
+@model IEnumerable<CamaradasModel>
+
+<link rel="stylesheet" href="~/css/tabelas.css">
+
+<h1>Listagem de Camaradas</h1>
+<hr>
+<a asp-action="Cadastrar" class="btn btn-primary">
+    <i class="bi bi-plus"></i>
+    Novo Camarada
+</a>
+<hr>
+@if (Model.Count() > 0)
+{
+    <table class="table table-sm table-striped table-hover table-produtos">
+        <thead class="bg-dark bg-opacity-75 bg-gradient text-white">
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>CPF</th>
+                <th>Data de Nascimento</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.idCamaradas.ToString("D2")</td>
+                    <td>@item.Nome</td>
+                    <td>@item.Sobrenome</td>
+                    <td>@item.CPF</td>
+                    <td>@item.DataNascimento.ToShortDateString()</td>
+                    <td>
+                        <a class="btn btn-secondary btn-sm" asp-controller="Camaradas" asp-action="Alterar" asp-route-id="@item.idCamaradas" title="Alterar">Alterar</a>
+
+                        <a class="btn btn-danger btn-sm" asp-controllerr="Camaradas" asp-action="Excluir" asp-route-id="@item.idCamaradas" title="Excluir">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h3>Não há camaradas cadastrados.</h3>
+}

@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Laboro.Models;
+namespace Auth.Models;
 
 public class EstoqueModel
 {
