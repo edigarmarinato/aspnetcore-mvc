@@ -1,0 +1,35 @@
+@using Auth.Models;
+@model CamaradasModel;
+
+<h2>Alteração de Camarada</h2>
+<hr>
+<form method="post">
+    <div class="form-floating">
+        <input type="text" class="form-control" placeholder="Nome" asp-for="@Model.Nome">
+        <label asp-for="@Model.Nome"></label><br>
+        <span class="text-danger" asp-validation-for="@Model.Nome"></span>
+    </div>
+
+    <div class="form-floating">
+        <input type="text" class="form-control" placeholder="Sobrenome" asp-for="@Model.Sobrenome">
+        <label asp-for="@Model.Sobrenome"></label><br>
+        <span class="text-danger" asp-validation-for="@Model.Sobrenome"></span>
+    </div>
+
+    <div class="form-floating">
+        <input type="text" class="form-control" placeholder="CPF" asp-for="@Model.CPF">
+        <label asp-for="@Model.CPF"></label><br>
+        <span class="text-danger" asp-validation-for="@Model.CPF"></span>
+    </div>
+
+    <div class="form-floating">
+        <input type="date" class="form-control" placeholder="Data de Nascimento" asp-for="@Model.DataNascimento">
+        <label asp-for="@Model.DataNascimento"></label><br>
+        <span class="text-danger" asp-validation-for="@Model.DataNascimento"></span>
+    </div>
+    <p>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+
+        <input type="submit" value="Salvar" class="btn btn-primary">
+    </p>
+</form>
