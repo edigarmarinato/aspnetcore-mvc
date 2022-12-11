@@ -31,7 +31,7 @@ COPY --from=build /source/SimpleAuthentication/dados.db ./
 #expõe a porta 5000 para o aplicativo
 # EXPOSE 5000
 #executa o aplicativo
-ENTRYPOINT ["dotnet", "Authentication.dll"]
+ENTRYPOINT ["dotnet", "SimpleAuthentication/Authentication.dll"]
 
 #para iniciar o serviço do docker
 # sudo dockerd
