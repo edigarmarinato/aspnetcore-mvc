@@ -17,35 +17,6 @@ namespace Authentication.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.10");
 
-            modelBuilder.Entity("Auth.Models.CamaradasModel", b =>
-                {
-                    b.Property<int>("idCamaradas")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("CPF")
-                        .IsRequired()
-                        .HasMaxLength(14)
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("DataNascimento")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Sobrenome")
-                        .IsRequired()
-                        .HasMaxLength(45)
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("idCamaradas");
-
-                    b.ToTable("Camaradas");
-                });
-
             modelBuilder.Entity("Auth.Models.CategoriaModel", b =>
                 {
                     b.Property<int>("Id")
@@ -127,7 +98,7 @@ namespace Authentication.Migrations
                             Email = "admin@email.com",
                             IsAdmin = true,
                             Nome = "Administrador do Sistema",
-                            Senha = "$2a$10$SR83N6Qja94Ytw5UdE8hZ.TXNplxIB.qqzPcba/5lNWwGNDQzGuG."
+                            Senha = "$2a$10$tAqasmxnBhm0i6Kelv7KI.3cJFwdADIZpesecCAt3wW2LJ3c5IvMu"
                         });
                 });
 

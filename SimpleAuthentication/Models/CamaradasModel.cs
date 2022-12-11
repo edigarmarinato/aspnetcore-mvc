@@ -1,8 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Auth.Models;
 
-namespace Auth.Models;
+namespace Laboro.Models;
 
 public class CamaradasModel
 {

@@ -1,4 +1,5 @@
 using Auth.Models;
+using Laboro.Models;
 using Microsoft.EntityFrameworkCore;
 using static BCrypt.Net.BCrypt;
 
@@ -9,9 +10,6 @@ public class AppDbContext : DbContext
     public DbSet<UsuarioModel> Usuarios { get; set; }
     public DbSet<CategoriaModel> Categorias { get; set; }
     public DbSet<ProdutoModel> Produtos { get; set; }
-
-    public DbSet<CamaradasModel> Camaradas { get; set; }
-    
 
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
